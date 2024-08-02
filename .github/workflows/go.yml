@@ -29,6 +29,13 @@ jobs:
         go-version: '1.22'
         cache: true
 
+## lint a project code and run static analysis: 
+    - name: Revive Action
+      uses: morphy2k/revive-action@v2.4.1
+
+    - name: Staticcheck
+      uses: dominikh/staticcheck-action@v1.3.0
+      
     - name: Build
       run: |
         go mod download
